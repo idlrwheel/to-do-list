@@ -11,7 +11,7 @@ function ToDoList(){
 
     function addTask(){
         if(newTask.trim() !== ""){
-            setTasks([...t, newTask, completed]);
+            setTasks([...tasks, newTask]);
             setNewTask("");
         }
        
@@ -32,7 +32,7 @@ function ToDoList(){
         <div className="to-do-list">
             <h1>To-Do-List</h1>
             <div>
-                <input type = "text" placeholder = "Digite uma tarefa..." value = {newTask} onChange = {addTask}></input>
+                <input type = "text" placeholder = "Digite uma tarefa..." value = {newTask} onChange = {handleInputChange}></input>
                 <button className = "add-button" onClick = {addTask}>
                     Adicionar
                 </button>
